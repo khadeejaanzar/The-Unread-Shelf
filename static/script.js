@@ -264,3 +264,18 @@ navLinks.forEach(link => {
         });
     });
 });
+// Grab the Delete Button DOM element
+const deleteBookBtn = document.getElementById("deleteBookBtn");
+
+// Delete Book Action
+deleteBookBtn.addEventListener("click", () => {
+    if (!activeSelectedBook) return;
+
+    // Remove book element from the bookshelf DOM
+    activeSelectedBook.remove();
+    activeSelectedBook = null;
+
+    // Close modal & update total count
+    closeModal(bookModal);
+    updateBookCount();
+});
