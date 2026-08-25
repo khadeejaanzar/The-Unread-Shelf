@@ -373,3 +373,20 @@ footer {
   font-size: 12px;
   color: var(--text-muted);
 }
+.delete-book-btn {
+  width: 100%;
+  margin-top: 10px;
+  background-color: #A34845;
+  color: #FFF;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.delete-book-btn:hover {
+  background-color: #823533;
+}
