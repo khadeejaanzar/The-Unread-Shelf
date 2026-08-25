@@ -2,8 +2,6 @@
 
 An interactive web application designed to track your personal reading list, organize books by reading status, and help you randomly pick your next read with a fun "Spin the Shelf" feature.
 
-![The Unread Shelf Banner](static/preview.png) *(Optional: Add a screenshot of your app here)*
-
 ---
 
 ## ✨ Features
