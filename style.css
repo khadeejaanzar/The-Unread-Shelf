@@ -1,0 +1,375 @@
+/* ================= GLOBAL STYLES & RESET ================= */
+:root {
+  --bg-color: #F6F3ED;
+  --card-bg: #FCFAF7;
+  --text-dark: #2C221E;
+  --text-muted: #8C827A;
+  --accent-btn: #382B26;
+  --accent-hover: #211915;
+  --border-light: #EBE6DF;
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  padding-bottom: 60px;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 60px;
+  background-color: transparent;
+}
+
+.logo h1 {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.navbar nav {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 500;
+  padding-bottom: 4px;
+  transition: color 0.2s;
+}
+
+.nav-link.active, .nav-link:hover {
+  color: var(--text-dark);
+  border-bottom: 2px solid var(--text-dark);
+}
+
+.add-book-btn {
+  background: transparent;
+  border: 1px solid var(--text-dark);
+  border-radius: 20px;
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--text-dark);
+  transition: all 0.2s ease;
+}
+
+.add-book-btn:hover {
+  background-color: var(--text-dark);
+  color: #FFF;
+}
+
+/* ================= HERO SECTION ================= */
+.hero {
+  max-width: 1100px;
+  margin: 40px auto 20px auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.hero h2 {
+  font-family: var(--font-serif);
+  font-size: 54px;
+  font-weight: 500;
+  line-height: 1.1;
+  color: var(--text-dark);
+}
+
+.hero h2 em {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.hero-description {
+  margin-top: 16px;
+  color: var(--text-muted);
+  font-size: 16px;
+}
+
+.book-count {
+  text-align: right;
+  background-color: var(--card-bg);
+  padding: 24px 32px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+}
+
+.book-count #bookCount {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 48px;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.book-count small {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* ================= BOOKSHELF ================= */
+.bookshelf-container {
+  max-width: 1000px;
+  margin: 60px auto 0 auto;
+  position: relative;
+  padding: 0 20px;
+}
+
+.bookshelf {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 6px;
+  padding-bottom: 0px;
+}
+
+/* Spine Formatting */
+.book {
+  width: 44px;
+  height: 260px;
+  border-radius: 4px 4px 0 0;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  position: relative;
+  box-shadow: inset -3px 0 5px rgba(0,0,0,0.15), inset 2px 0 3px rgba(255,255,255,0.2);
+}
+
+.book:hover {
+  transform: translateY(-10px);
+  filter: brightness(1.05);
+}
+
+.book-spine {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 4px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.book-title {
+  font-family: var(--font-serif);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.book-author {
+  font-size: 10px;
+  opacity: 0.75;
+}
+
+/* Book Spine Colors & Heights */
+.book-1  { background: #2B1E1A; height: 270px; }
+.book-2  { background: #A46944; height: 240px; }
+.book-3  { background: #3C4E3D; height: 265px; }
+.book-4  { background: #684838; height: 255px; }
+.book-5  { background: #8E7044; height: 250px; }
+.book-6  { background: #2A3B4C; height: 260px; }
+.book-7  { background: #7C3734; height: 245px; }
+.book-8  { background: #475D68; height: 260px; }
+.book-9  { background: #665243; height: 250px; }
+.book-10 { background: #55343B; height: 265px; }
+.book-11 { background: #2E4038; height: 240px; }
+.book-12 { background: #4D453E; height: 255px; }
+
+/* Wooden Shelf Graphics */
+.wooden-shelf {
+  height: 22px;
+  background: linear-gradient(180deg, #6B4426 0%, #4A2E17 100%);
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.shelf-shadow {
+  height: 15px;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0) 70%);
+}
+
+/* ================= SPIN SECTION ================= */
+.shelf-controls {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.spin-button {
+  background-color: var(--accent-btn);
+  color: #FFF;
+  border: none;
+  border-radius: 24px;
+  padding: 12px 28px;
+  font-size: 14px;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s;
+}
+
+.spin-button:hover {
+  background-color: var(--accent-hover);
+}
+
+.shelf-controls p {
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* ================= MODALS & OVERLAYS ================= */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(44, 34, 30, 0.25);
+  backdrop-filter: blur(4px);
+  display: none; /* Hidden by default */
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Active Modal Visibility */
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal {
+  background-color: var(--card-bg);
+  width: 100%;
+  max-width: 420px;
+  padding: 32px;
+  border-radius: 16px;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.modal-label {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.modal h3 {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.detail-author {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.detail-divider {
+  height: 1px;
+  background-color: var(--border-light);
+  margin: 16px 0;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.detail-row span {
+  color: var(--text-muted);
+}
+
+.modal-action, .add-submit {
+  width: 100%;
+  margin-top: 20px;
+  background-color: var(--accent-btn);
+  color: #FFF;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Form Styles */
+.add-book-modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.add-book-modal label {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.add-book-modal input, .add-book-modal select {
+  padding: 10px;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  background-color: #FFF;
+  font-size: 14px;
+  outline: none;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
