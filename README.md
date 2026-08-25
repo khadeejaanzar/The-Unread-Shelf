@@ -22,6 +22,10 @@ An interactive web application designed to track your personal reading list, org
 - **Deployment:** Render
 
 ---
+## 🌐 Live Demo
+
+Check out the live app here: https://the-unread-shelf.onrender.com/
+
 
 ## 📁 Project Structure
 
@@ -40,6 +44,3 @@ The-Unread-Shelf/
 └── templates/             # HTML templates
     └── index.html         # Main dashboard interface
 
-## 🌐 Live Demo
-
-Check out the live app here: https://the-unread-shelf.onrender.com/
