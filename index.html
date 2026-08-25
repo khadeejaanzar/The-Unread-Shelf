@@ -1,0 +1,619 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Unread Shelf</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <h1>The Unread Shelf</h1>
+        </div>
+
+        <nav>
+            <a href="#" class="nav-link active" data-filter="all">
+                Shelf
+            </a>
+
+            <a href="#" class="nav-link" data-filter="reading">
+                Currently Reading
+            </a>
+
+            <a href="#" class="nav-link" data-filter="finished">
+                Finished
+            </a>
+        </nav>
+
+        <button class="add-book-btn" id="openAddBook">
+            + Add Book
+        </button>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <div>
+
+                <p class="eyebrow">
+                    YOUR LITTLE LIBRARY
+                </p>
+
+                <h2>
+                    Stories waiting<br>
+                    <em>to be read.</em>
+                </h2>
+
+                <p class="hero-description">
+                    A cozy little corner for all the books
+                    you've been meaning to read.
+                </p>
+
+            </div>
+
+
+            <div class="book-count">
+
+                <span id="bookCount">12</span>
+
+                <small>
+                    BOOKS ON YOUR TBR
+                </small>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= BOOKSHELF ================= -->
+
+        <section class="bookshelf-container">
+
+            <div class="shelf-top"></div>
+
+            <div class="bookshelf" id="bookshelf">
+
+
+                <!-- BOOK 1 -->
+
+                <div class="book book-1"
+                     data-title="The Secret History"
+                     data-author="Donna Tartt"
+                     data-status="tbr"
+                     data-genre="Dark Academia">
+
+                    <div class="book-spine">
+
+                        <span class="book-decoration"></span>
+
+                        <span class="book-title">
+                            The Secret History
+                        </span>
+
+                        <span class="book-author">
+                            Donna Tartt
+                        </span>
+
+                        <span class="book-decoration bottom"></span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BOOK 2 -->
+
+                <div class="book book-2"
+                     data-title="Normal People"
+                     data-author="Sally Rooney"
+                     data-status="tbr"
+                     data-genre="Contemporary">
+
+                    <div class="book-spine">
+
+                        <span class="book-title">
+                            Normal People
+                        </span>
+
+                        <span class="book-author">
+                            Sally Rooney
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BOOK 3 -->
+
+                <div class="book book-3"
+                     data-title="Circe"
+                     data-author="Madeline Miller"
+                     data-status="tbr"
+                     data-genre="Fantasy">
+
+                    <div class="book-spine">
+
+                        <span class="book-decoration"></span>
+
+                        <span class="book-title">
+                            Circe
+                        </span>
+
+                        <span class="book-author">
+                            Madeline Miller
+                        </span>
+
+                        <span class="book-decoration bottom"></span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BOOK 4 -->
+
+                <div class="book book-4"
+                     data-title="The Song of Achilles"
+                     data-author="Madeline Miller"
+                     data-status="reading"
+                     data-genre="Historical Fantasy">
+
+                    <div class="book-spine">
+
+                        <span class="book-title">
+                            The Song of Achilles
+                        </span>
+
+                        <span class="book-author">
+                            Madeline Miller
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BOOK 5 -->
+
+                <div class="book book-5"
+                     data-title="Dune"
+                     data-author="Frank Herbert"
+                     data-status="tbr"
+                     data-genre="Science Fiction">
+
+                    <div class="book-spine">
+
+                        <span class="book-decoration"></span>
+
+                        <span class="book-title">
+                            Dune
+                        </span>
+
+                        <span class="book-author">
+                            Frank Herbert
+                        </span>
+
+                        <span class="book-decoration bottom"></span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BOOK 6 -->
+
+                <div class="book book-6"
+                     data-title="The Picture of Dorian Gray"
+                     data-author="Oscar Wilde"
+                     data-status="finished"
+                     data-genre="Classic">
+
+                    <div class="book-spine">
+
+                        <span class="book-title">
+                            The Picture of Dorian Gray
+                        </span>
+
+                        <span class="book-author">
+                            Oscar Wilde
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BOOK 7 -->
+
+                <div class="book book-7"
+                     data-title="Pride and Prejudice"
+                     data-author="Jane Austen"
+                     data-status="tbr"
+                     data-genre="Romance / Classic">
+
+                    <div class="book-spine">
+
+                        <span class="book-decoration"></span>
+
+                        <span class="book-title">
+                            Pride and Prejudice
+                        </span>
+
+                        <span class="book-author">
+                            Jane Austen
+                        </span>
+
+                        <span class="book-decoration bottom"></span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BOOK 8 -->
+
+                <div class="book book-8"
+                     data-title="A Little Life"
+                     data-author="Hanya Yanagihara"
+                     data-status="tbr"
+                     data-genre="Literary Fiction">
+
+                    <div class="book-spine">
+
+                        <span class="book-title">
+                            A Little Life
+                        </span>
+
+                        <span class="book-author">
+                            Hanya Yanagihara
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BOOK 9 -->
+
+                <div class="book book-9"
+                     data-title="Tomorrow, and Tomorrow, and Tomorrow"
+                     data-author="Gabrielle Zevin"
+                     data-status="reading"
+                     data-genre="Contemporary">
+
+                    <div class="book-spine">
+
+                        <span class="book-title">
+                            Tomorrow, and Tomorrow, and Tomorrow
+                        </span>
+
+                        <span class="book-author">
+                            Gabrielle Zevin
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BOOK 10 -->
+
+                <div class="book book-10"
+                     data-title="The Bell Jar"
+                     data-author="Sylvia Plath"
+                     data-status="tbr"
+                     data-genre="Classic">
+
+                    <div class="book-spine">
+
+                        <span class="book-decoration"></span>
+
+                        <span class="book-title">
+                            The Bell Jar
+                        </span>
+
+                        <span class="book-author">
+                            Sylvia Plath
+                        </span>
+
+                        <span class="book-decoration bottom"></span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BOOK 11 -->
+
+                <div class="book book-11"
+                     data-title="Rebecca"
+                     data-author="Daphne du Maurier"
+                     data-status="tbr"
+                     data-genre="Mystery">
+
+                    <div class="book-spine">
+
+                        <span class="book-title">
+                            Rebecca
+                        </span>
+
+                        <span class="book-author">
+                            Daphne du Maurier
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BOOK 12 -->
+
+                <div class="book book-12"
+                     data-title="1984"
+                     data-author="George Orwell"
+                     data-status="tbr"
+                     data-genre="Dystopian">
+
+                    <div class="book-spine">
+
+                        <span class="book-decoration"></span>
+
+                        <span class="book-title">
+                            1984
+                        </span>
+
+                        <span class="book-author">
+                            George Orwell
+                        </span>
+
+                        <span class="book-decoration bottom"></span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="wooden-shelf"></div>
+
+            <div class="shelf-shadow"></div>
+
+        </section>
+
+
+        <!-- ================= SPIN ================= -->
+
+        <section class="shelf-controls">
+
+            <button id="spinButton" class="spin-button">
+
+                <span>✦</span>
+
+                Spin the Shelf
+
+                <span>✦</span>
+
+            </button>
+
+            <p>
+                Don't know what to read?
+                <strong>Let fate decide.</strong>
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= BOOK DETAILS MODAL ================= -->
+
+    <div class="modal-overlay" id="bookModal">
+
+        <div class="modal book-details">
+
+            <button class="modal-close" id="closeBookModal">
+                ×
+            </button>
+
+            <p class="modal-label">
+                BOOK DETAILS
+            </p>
+
+            <h3 id="detailTitle">
+                The Secret History
+            </h3>
+
+            <p class="detail-author" id="detailAuthor">
+                Donna Tartt
+            </p>
+
+            <div class="detail-divider"></div>
+
+            <div class="detail-row">
+
+                <span>Genre</span>
+
+                <strong id="detailGenre">
+                    Dark Academia
+                </strong>
+
+            </div>
+
+            <div class="detail-row">
+
+                <span>Status</span>
+
+                <strong id="detailStatus">
+                    TBR
+                </strong>
+
+            </div>
+
+            <button class="modal-action" id="detailAction">
+                Start Reading
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= ADD BOOK MODAL ================= -->
+
+    <div class="modal-overlay" id="addBookModal">
+
+        <div class="modal add-book-modal">
+
+            <button class="modal-close" id="closeAddBook">
+                ×
+            </button>
+
+            <p class="modal-label">
+                ADD TO YOUR SHELF
+            </p>
+
+            <h3>
+                A new story?
+            </h3>
+
+            <form id="addBookForm">
+
+                <label>
+                    Book title
+                </label>
+
+                <input
+                    type="text"
+                    id="newTitle"
+                    placeholder="e.g. The Night Circus"
+                    required
+                >
+
+
+                <label>
+                    Author
+                </label>
+
+                <input
+                    type="text"
+                    id="newAuthor"
+                    placeholder="e.g. Erin Morgenstern"
+                    required
+                >
+
+
+                <label>
+                    Genre
+                </label>
+
+                <input
+                    type="text"
+                    id="newGenre"
+                    placeholder="e.g. Fantasy"
+                >
+
+
+                <label>
+                    Status
+                </label>
+
+                <select id="newStatus">
+
+                    <option value="tbr">
+                        TBR
+                    </option>
+
+                    <option value="reading">
+                        Currently Reading
+                    </option>
+
+                    <option value="finished">
+                        Finished
+                    </option>
+
+                </select>
+
+
+                <button
+                    type="submit"
+                    class="add-submit"
+                >
+                    Add to Shelf
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= RANDOM RESULT ================= -->
+
+    <div class="modal-overlay" id="randomResult">
+
+        <div class="modal result-card">
+
+            <button class="modal-close" id="closeResult">
+                ×
+            </button>
+
+            <p class="modal-label">
+                YOUR NEXT READ
+            </p>
+
+            <h3 id="resultTitle">
+                The Secret History
+            </h3>
+
+            <p id="resultAuthor" class="detail-author">
+                Donna Tartt
+            </p>
+
+            <button class="modal-action">
+                Start Reading →
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+
+        <p>
+            Made for people who have more books than time.
+        </p>
+
+    </footer>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
+
